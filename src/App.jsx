@@ -1,10 +1,6 @@
 import { Component } from "react";
-
-class Heading extends Component {
-  render() {
-    return <h1>{this.props.title}</h1>;
-  }
-}
+import Heading from "./components/heading";
+import Button from "./components/buttons";
 
 class App extends Component {
   render() {
@@ -12,8 +8,15 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <Heading title="Hello World!" />
-          <Heading title="This is react" />
-          <Heading title="Learing about Props" />
+          <Button onClick={() => alert("clicked btn 1")}>
+          Button 1
+          </Button>
+          <Button onClick={() => alert("clicked btn 2")}>
+            Button 2
+            </Button>
+          <Button onClick={() => alert("clicked btn 3")}>
+            Button 3
+            </Button>
         </header>
       </div>
     );
